@@ -78,6 +78,7 @@
         line-height: 18px !important;
     }
 }
+
 @media screen and (max-width: 650px) {
     .row.portfolio-content .col-xs-6 {
         width: 100%;

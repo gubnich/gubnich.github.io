@@ -1,0 +1,122 @@
+@media screen and (max-width: 800px){
+    .item_jambu .item_preview{
+        width: 50% !important;
+    }
+    .item_jambu h5{
+        right: 5% !important;
+        top: 10% !important;
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+    }
+    .item_jambu .demobutton{
+        display: none;
+    }
+    .item_jambu .downloadbutton{
+        letter-spacing: 3px !important;
+        margin-right: 15px !important;
+    }
+}
+@media screen and (max-width: 500px){
+    .item_jambu .item_preview{
+        width: 100% !important;
+    }
+    .item_jambu h5{
+        display: none;
+    }
+    .item_jambu .demobutton{
+        display: none;
+    }
+    .buttons{
+        left: 0;
+        bottom: -5% !important;
+    }
+    .item_jambu .downloadbutton{
+        background-color: #202020;
+        color: #fff !important;
+        letter-spacing: 15px !important;
+        position: absolute;
+        width: 100%;
+        line-height: 25px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        text-align: center;
+        transition: all 0.2s ease-out;
+    }
+    .item_jambu .downloadbutton:hover{
+        letter-spacing: 17px !important;
+        transition: all 0.2s ease-out;
+    }
+}
+body{
+    background-color: #f9f9f9;
+}
+h1{
+    font-size: 55px;
+    border-bottom: 5px solid #000000;
+    margin-bottom: 25px;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.item_jambu{
+    width: 100%;
+    line-height: 0;
+    background: url("img/jambu-background.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    float: left;
+    z-index: -2;
+    position: relative;
+}
+.item_jambu img{
+    width: 100%;
+    z-index: -1;
+    position: relative;
+}
+.buttons{
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+}
+.item_jambu .demobutton{
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 13px;
+    margin-right: 25px;
+}
+.item_jambu .demobutton:hover{
+    color: #fff;
+}
+.item_jambu .downloadbutton{
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 13px;
+    margin-right: 25px;
+}
+.item_jambu .downloadbutton:hover{
+    color: #fff;
+}
+.item_jambu h5{
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+.item_jambu .item_preview{
+    display: inline-block;
+    width: 34%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+.item_jambu .item_preview:hover{
+    background-color: rgba(33, 33, 33, 0.1);
+    transition: all 0.5s ease-out;
+}
