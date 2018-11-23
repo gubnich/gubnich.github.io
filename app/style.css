@@ -1,0 +1,72 @@
+@media screen and (max-width: 1000px){
+    .carousel li{
+        -flex-basis: calc(100% /2);
+        max-width: calc(100% /2);
+    }
+}
+@media screen and (min-width: 1000px){
+    .carousel li{
+        -flex-basis: calc(100% /3);
+        max-width: calc(100% /3);
+
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    background: #282b37;
+}
+ul {
+    list-style: none;
+}
+.carousel, .controls {
+    display: flex;
+    position: relative;
+    -flex-wrap: wrap;
+    padding: 0;
+    -transform: translateX(-50px);
+    transition: transform .1s;
+    -transition-timing-function: ease-out;
+}
+.controls {
+    justify-content: center;
+}
+.carousel li{
+    -flex-basis: calc(100% /3);
+    height: 400px;
+    padding: 3%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+.controls li {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}
+.controls a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+.controls a.current {
+    background: red;
+}
+img {
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+*{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -ms-user-select: none;
+}
