@@ -5,6 +5,7 @@ class SearchBar {
         this.self = document.createElement('form');
         this.self.classList.add('search-bar');
         this.submit = document.createElement('input');
+        this.submit.value = '';
         this.input = document.createElement('input');
         this.submit.setAttribute('type','submit');
         this.input.setAttribute('type','text');
