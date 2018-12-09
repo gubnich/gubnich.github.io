@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<link rel="stylesheet" href="style.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img class="resetStyle" src="img/GitLogo.png" alt="#">
+				</section>
+				<section>
+					<img src="img/Linus.jpg" alt="#">
+					<br>
+					<img src="img/GitVSGithub.png" alt="#">
+				</section>
+				<section>
+					<p>Git is a version control system</p>
+					<img class="resetStyle" src="img/progress.png" alt="">
+				</section>
+				<section>
+					<img src="img/gameover.jpg" alt="#">
+				</section>
+				<section>
+					<img src="img/versions.png" alt="#">
+				</section>
+				<section>
+					<img src="img/raiting.png" alt="#">
+					<a href="https://insights.stackoverflow.com/survey/2017#development-practices" target="_blank">Developer Survey Results 2017</a>
+				</section>
+				<section>
+					<img src="img/install.png" alt="#">
+					<a href="https://git-scm.com/" target="_blank">git-scm.com</a>
+				</section>
+				<section>
+					<img src="img/init.png" alt="#">
+				</section>
+				<section>
+					<p>After creating somefile.txt in the project directory:</p>
+					<img src="img/addTxtFile.png" alt="#">
+					<img src="img/status.png" alt="#">
+				</section>
+				<section>
+					<p>Use 'git add . ' or 'git add filename'</p>
+					<img src="img/add.png" alt="#">
+				</section>
+				<section>
+					<p>git commit -m "some description"</p>
+					<img src="img/commit.png" alt="#">
+				</section>
+				<section>
+					<p>VIM editor:</p>
+					<ul>
+						<li>press 'i' to get in the insert mode</li>
+						<li>press 'esc' to get in the command mode</li>
+						<li>type :wq to save and exit</li>
+					</ul>
+					<img src="img/vim.png" alt="#">
+				</section>
+				<section>
+					<p>git log after two commits:</p>
+					<img src="img/log.png" alt="#">
+				</section>
+				<section>
+					<p>git revert</p>
+					<img src="img/revert.png" alt="#">
+				</section>
+				<section>
+					<img src="img/gitAreas.png" alt="#">
+				</section>
+				<section>
+					<p>Shortcut: 'git checkout -b branch_name'</p>
+					<img src="img/git-branch.png" alt="#">
+				</section>
+				<section>
+					<p>git merge branch_name</p>
+					<img src="img/git-merge-conflict.png" alt="#">
+					<img src="img/git-merge-conflict-view.png" alt="#">
+				</section>
+				<section>
+					<p>Delete branch</p>
+					<img src="img/git-delete-branch.png" alt="#">
+				</section>
+				<section>
+					<p>Hosting services</p>
+					<img src="img/git-hosting.jpg" alt="#">
+				</section>
+				<section>
+					<p>To create repository press 'new' button, then enter the name of the repository and press 'create'</p>
+					<img src="img/github-repositories-tub.png" alt="#">
+				</section>
+				<section>
+					<p>Clone repository</p>
+					<img src="img/github-clone-button.png" alt="#">
+				</section>
+				<section>
+					<p>
+						<ul>
+							<li>git clone - to make a local copy of the remote repository</li>
+							<li>git push origin branch_name - to send local changes to the remote repository</li>
+							<li>git pull - to fetch and merge the changes from the remote repository</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<p>Pull request</p>
+					<img src="img/github-pullrequest.png" alt="#">
+				</section>
+				<section>
+					<p>Good luck</p>
+					<a href="http://try.github.io/" target="_blank">Resources to learn Git</a>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
