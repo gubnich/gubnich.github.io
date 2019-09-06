@@ -1,0 +1,23 @@
+.blue {
+  color: #42affa !important;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  max-height: 100%;
+}
+.flex img {
+  max-height: 70vh;
+}
+.contain {
+  object-fit: contain;
+}
+.scale08 {
+  transform: scale(0.8);
+}
+.scale07 {
+  transform: scale(0.7);
+}
+.width25 {
+  width: 25%;
+}
