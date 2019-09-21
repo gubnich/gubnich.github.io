@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Дипломный проект</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div class="blue">Дипломный проект:</div>
+          <br />
+          <h4>Проектирование и разработка браузерной развивающей игры для детей</h4>
+          <br />
+          <small>Выполнил слушатель группы ПОИС1801в Губаныч А.Н.</small>
+          <br />
+          <small>Научный руководитель: Головчик А.И.</small>
+        </section>
+        <section>
+          <h4 class="blue">Задачи</h4>
+          <ul>
+            <li>Браузер Google Chrome</li>
+            <li>Развитие и обучение детей 6-8 лет</li>
+            <li>Интерфейс и логика игры</li>
+          </ul>
+        </section>
+        <section>
+          <h4 class="blue">Роли пользователей</h4>
+          <ul>
+            <li>ученики выполняют задания</li>
+            <li>учителя могут назначать задания</li>
+          </ul>
+        </section>
+        <section>
+          <h4 class="blue">Персонажи</h4>
+          <div class="flex scale08">
+            <img class="contain" src="img/Idle__000.png" alt="" />
+            <img class="contain" src="img/IDLE_000.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Пример спрайта</h4>
+          <img class="contain" src="img/attackSpritesheet6.png" alt="" />
+        </section>
+        <section>
+          <h4 class="blue">Технологии на стороне клиента:</h4>
+          <ul>
+            <li>HTML и CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+          </ul>
+        </section>
+        <section>
+          <h4 class="blue">Технологии на стороне сервера:</h4>
+          <ul>
+            <li>Node.js</li>
+            <li>ExpressJS</li>
+          </ul>
+        </section>
+        <section>
+          <h4 class="blue">Хранение данных:</h4>
+          <ul>
+            <li>База данных MongoDB</li>
+            <li>фреймворк Mongoose</li>
+            <li>сервис cloud.mongo</li>
+          </ul>
+        </section>
+        <section>
+          <div class="flex">
+            <p class="width25">Объект Javascript</p>
+            <pre><code class="hljs">
+var Obj = {
+  'property1': value1,
+  'property2': value2
+}
+</code></pre>
+          </div>
+          <div class="flex">
+            <p class="width25">JSON</p>
+            <pre><code class="hljs" >
+{
+  'property1': 'value1',
+  'property2': 'value2'
+}
+                  </code></pre>
+          </div>
+          <div class="flex">
+            <p class="width25">Документ MongoDB</p>
+            <pre><code class="hljs" >
+_id: ObjectId(“578f6fa2df35c7fbdbaed8d4”)
+field1: “some string”
+field2: 12345
+field3: 2019-01-20T05:00:00.000+00:00
+                </code></pre>
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Две коллекции Users и Tasks:</h4>
+          <div>
+            <div class="flex ">
+              <p class="width25">Структура документа коллекции Users</p>
+              <pre><code class="hljs">
+const Schema = mongoose.Schema({
+  name: mongoose.Schema.Types.String,
+  email: mongoose.Schema.Types.String,
+  password: mongoose.Schema.Types.String,
+  score: mongoose.Schema.Types.Number,
+  avatar: mongoose.Schema.Types.String,
+  teachers: [mongoose.Schema.Types.ObjectId],
+  students: [mongoose.Schema.Types.ObjectId],
+  fromteachers: [mongoose.Schema.Types.ObjectId],
+  fromstudents: [mongoose.Schema.Types.ObjectId],
+  toteachers: [mongoose.Schema.Types.ObjectId],
+  tostudents: [mongoose.Schema.Types.ObjectId],
+  assignments: [mongoose.Schema.Types.Object]
+});
+  </code></pre>
+            </div>
+            <div class="flex">
+              <p class="width25">Структура документа коллекции Tasks</p>
+              <pre><code class="hljs" >
+const tasksSchema = mongoose.Schema({
+  type: mongoose.Schema.Types.String,
+  name: mongoose.Schema.Types.String,
+  caption: mongoose.Schema.Types.String,
+  length: mongoose.Schema.Types.Number,
+  data: mongoose.Schema.Types.Object
+});
+                    </code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Пример компонента</h4>
+          <div class="flex">
+            <img class="contain" src="img/defaultGame.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Выбор задания</h4>
+          <div class="flex">
+            <img class="contain" src="img/magicSet.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Экран задания</h4>
+          <div class="flex">
+            <img class="contain" src="img/magicTask.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Меню</h4>
+          <div class="flex">
+            <img class="contain" src="img/menu.png" alt="" />
+          </div>
+        </section>
+        <section>
+          <h4 class="blue">Итог</h4>
+          <ul>
+            <li>React позволяет создавать масштабируемые приложения</li>
+            <li>В сочетании с javascript удобно использовать MongoDB (Mongoose)</li>
+          </ul>
+        </section>
+        <section>
+          <h4 class="blue">Демонстрация</h4>
+          <a href="https://boiling-falls-10160.herokuapp.com/">https://boiling-falls-10160.herokuapp.com/</a>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: "100%",
+        height: "100%",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
