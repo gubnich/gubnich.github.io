@@ -1,0 +1,113 @@
+.sourceInputWrapper {
+    position: relative;
+    display: flex;
+    width: 80vw;
+    max-width: 50rem;
+    margin: 9vh 0 5vh;
+    height: 2rem;
+    border: 1px solid grey;
+   
+}
+
+.sourceInput {
+    border: none;
+    outline: none;
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+}
+
+.expandButton {
+    display: flex;
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid grey;
+    cursor: pointer;
+}
+
+.active {
+    box-shadow: 0 0 5px tomato;
+}
+.sourceList {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 50vh;
+    width: 80vw;
+    transition: max-height 0.3s 0s;
+    padding: 1rem;
+    box-shadow: inset 0 0 50px;
+}
+.sourceList::-webkit-scrollbar {
+    width: 8px;
+}
+.sourceList::-webkit-scrollbar-thumb {
+    background: tomato;
+
+}
+.sourceItem {
+    display: grid;
+    grid-template-columns: 5fr 15fr 65fr 5fr;
+    grid-column-gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+.sourceItem:hover {
+    box-shadow: 0 0 5px;
+}
+
+.show {
+    display: grid;
+}
+.hide {
+    display: none;
+}
+.zip {
+    max-height: 2rem;
+}
+.articleList {
+    display: flex;
+    width: 90%;
+    max-width: 1360px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.articleItem {
+    display: flex;
+    width: 46%;
+    flex-direction: column;
+    margin: 1%;
+    box-shadow: 5px 5px 9px;
+    padding: 1%;
+}
+.articleItemImageWrapper {
+    padding-bottom: 56%;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.05) 92%,rgba(0,0,0,0) 100%);
+}
+.articleItemImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.articleItemTitle {
+    margin: 0.5rem 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.articleItemDescription {
+}
+html {
+    overflow-y: scroll;
+
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
